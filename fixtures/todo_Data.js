@@ -14,7 +14,7 @@ export const test = base.extend({
   // custom headless and slomotion -enabled browser
   browser: async ({}, use) => {
     const browser = await chromium.launch({
-      headless: false,
+      headless: true,
       slowMo: 1000
     });
     await use(browser);
