@@ -2,7 +2,7 @@ import { test, expect, request } from '@playwright/test'
 
 test.describe('API Functionalities Demo', () => {
 
-    test.only('GET FUNCTION', async ({ request }) => {
+    test('GET FUNCTION', async ({ request }) => {
 
         const res = await request.get('https://disease.sh/v3/covid-19/countries/USA?yesterday=true')
         expect(res.status()).toBe(200)
